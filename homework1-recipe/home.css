@@ -1,0 +1,63 @@
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: #9eb39f;
+}
+
+h1 {
+	font-size: 20pt;
+	text-align: center;
+	color: #e9f4e7;
+	font-family: Century Gothic, Futura，Verdana, sans-serif;
+	font-weight: normal;
+	word-spacing: 0.5em;
+}
+
+h2 {
+	background-color: #bdc5bb;
+	font-size: 16pt;
+	text-align: center;
+	color: #5a7b59;
+	font-family: Century Gothic, Futura，Verdana, sans-serif;
+	font-weight: bold;
+	word-spacing: 0.6em;
+}
+
+p.LemonPie {
+	font-size: 13pt;
+	color: #634c66;
+	font-family: Century Gothic, Futura，Verdana, sans-serif;
+	font-weight: normal;
+	word-spacing: 0.6em;
+	width: 300px;
+}
+
+p.Chocolate {
+	font-size: 13pt;
+	color: #644642;
+	font-family: Century Gothic, Futura，Verdana, sans-serif;
+	font-weight: normal;
+	word-spacing: 0.6em;
+	width: 300px;
+}
+
+p.TeaPower {
+	font-size: 13pt;
+	color: #3d5027; 
+	font-family: Century Gothic, Futura，Verdana, sans-serif;
+	font-weight: normal;
+	word-spacing: 0.6em;
+	width: 300px;
+}
+
+div.food {
+	display: inline;
+	width: 336px;
+	float: left;
+	background-color: #9eb39f;
+}
+
+div.thanks {
+	float: bottom;
+}
+
