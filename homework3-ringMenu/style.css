@@ -1,0 +1,197 @@
+body {
+	margin: auto;
+}
+
+#bottom-positioner {
+	width: 560px;
+	height: 370px;
+	position: relative;		/*相对于button的上一层进行定位*/
+}
+
+#button {
+	float: left;
+	height: 26px;
+	width: 26px;
+	margin-top: 255px;
+	margin-left: 265px;
+	border-radius: 52px;
+	background-image: url(assets/images/atplus_white.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-color: #989DD1;
+	background-position: center;
+	transition: 0.3s;
+}
+
+#button:hover {
+	float: left;
+	height: 52px;
+	width: 52px;
+	margin-bottom: 80px;
+	margin-top: 243px ;
+	margin-left: 254px;
+	border-radius: 52px;
+	background-image: url(assets/images/atplus_green.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-color: #3139A7;
+	background-position: center;
+}
+
+li {
+	list-style: none;
+}
+
+#control-ring {
+	visibility: hidden;
+}
+
+#button:hover #control-ring {
+	visibility: visible;
+	transition: 0.3s;
+}
+
+#button:hover .mask, #button:hover .history, #button:hover .message, #button:hover .setting, #button:hover .sign {
+	height: 34px;
+	width: 34px;
+	border-radius: 34px;
+	background-color: #7E7E7E;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+#button:hover .mask {
+	background-image: url(assets/images/nomask.png);
+	position: absolute;
+	left: 202px;
+	bottom: 121px;
+}
+
+#button:hover .history {
+	background-image: url(assets/images/history.png);
+	position: absolute;
+	left: 191px;
+	bottom: 85px;
+}
+
+#button:hover .message {
+	background-image: url(assets/images/message.png);
+	position: absolute;
+	left: 205px;
+	bottom: 48px;
+}
+
+
+#button:hover .message span {
+	float: right;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: white;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	border-radius: 20px;
+	background-color: #FC392E;
+	position: absolute;
+	left: 23px;
+	bottom: 18px;
+}
+
+#button:hover .setting {
+	background-image: url(assets/images/setting.png);
+	position: absolute;
+	left: 239px;
+	bottom: 27px;
+}
+
+#button:hover .sign {
+	background-image: url(assets/images/signin.png);
+	position: absolute;
+	left: 281px;
+	bottom: 30px;
+}
+
+#info-bar {
+	visibility: hidden;		/*用opacity会导致info-bar子块触发动画效果*/
+	border-radius: 130px;	/*如果不放在这里就会有一个矩形→圆形的变化*/
+}
+
+#button:hover #info-bar {
+	visibility: visible;
+	transition: 0.3s;
+	position: absolute;
+	top: 100px;
+	right: 215px;
+	width: 130px;
+	height: 130px;
+	background-color: #7E7E7E;
+}
+
+#button:hover .user {
+	visibility: visible;
+	position: absolute;
+	left: 40px;
+	bottom: 95px;
+}
+
+#button:hover .user span {
+	font-family: sans-serif;
+	color: white;
+	font-size: 17px;
+	position: absolute;
+	left: 24px;
+	bottom: 5px;
+	margin-left: 10px;
+}
+
+#button:hover .comment {
+	position: absolute;
+	left: 28px;
+	bottom: 56px;
+}
+
+#button:hover .comment span {
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 28px;
+	position: absolute;
+	left: 38px;
+	bottom: 2px;
+}
+
+#button:hover .posted {
+	position: absolute;
+	left: 20px;
+	bottom: 24px;
+}
+
+#button:hover .posted span {
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+	position: absolute;
+	left: 28px;
+	bottom: 5px;
+	color: #2AD394;
+}
+
+#button:hover .like {
+	position: absolute;
+	left: 68px;
+	bottom: 24px;
+}
+
+#button:hover .like span {
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+	position: absolute;
+	left: 32px;
+	bottom: 5px;
+	color: #2AD394;
+}
