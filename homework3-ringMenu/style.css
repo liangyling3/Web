@@ -1,8 +1,5 @@
-body {
-	margin: auto;
-}
-
 #bottom-positioner {
+	margin: auto;
 	width: 560px;
 	height: 370px;
 	position: relative;		/*相对于button的上一层进行定位*/
