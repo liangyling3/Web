@@ -5,7 +5,7 @@
 	position: relative;		/*相对于button的上一层进行定位*/
 }
 
-#button {
+#button {					/*初始按钮*/
 	float: left;
 	height: 26px;
 	width: 26px;
@@ -17,10 +17,10 @@
 	background-repeat: no-repeat;
 	background-color: #989DD1;
 	background-position: center;
-	transition: 0.3s;
+	transition: 0.5s;
 }
 
-#button:hover {
+#button:hover {				/*触发后按钮*/
 	float: left;
 	height: 52px;
 	width: 52px;
@@ -39,15 +39,21 @@ li {
 	list-style: none;
 }
 
-#control-ring {
-	visibility: hidden;
+#control-ring-container {
+	transform: scale(0);
+	position: absolute;
+	top: 260px;
+	left: 260px;
 }
 
-#button:hover #control-ring {
-	visibility: visible;
-	transition: 0.3s;
+#button:hover #control-ring-container {
+	transform: scale(1);
+	transition: 0.5s;
+	position: absolute;
+	top: 360px;
+	left: 5px;
 }
-
+ 
 #button:hover .mask, #button:hover .history, #button:hover .message, #button:hover .setting, #button:hover .sign {
 	height: 34px;
 	width: 34px;
@@ -111,13 +117,13 @@ li {
 }
 
 #info-bar {
-	visibility: hidden;		/*用opacity会导致info-bar子块触发动画效果*/
-	border-radius: 130px;	/*如果不放在这里就会有一个矩形→圆形的变化*/
+	transform: scale(0);		/*用opacity会导致info-bar子块触发动画效果*/
+	border-radius: 130px;		/*如果不放在这里就会有一个矩形→圆形的变化*/
 }
 
 #button:hover #info-bar {
-	visibility: visible;
-	transition: 0.3s;
+	transform: scale(1);
+	transition: 0.5s;
 	position: absolute;
 	top: 100px;
 	right: 215px;
