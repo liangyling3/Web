@@ -39,19 +39,14 @@ li {
 	list-style: none;
 }
 
-#control-ring-container {
-	transform: scale(0);
-	position: absolute;
-	top: 260px;
-	left: 260px;
+#control-ring-container {	
+	transform: scale(0);		/*不把定位放在这里会产生抖动*/
+	position: relative;
 }
 
 #button:hover #control-ring-container {
 	transform: scale(1);
 	transition: 0.5s;
-	position: absolute;
-	top: 360px;
-	left: 5px;
 }
  
 #button:hover .mask, #button:hover .history, #button:hover .message, #button:hover .setting, #button:hover .sign {
@@ -67,22 +62,22 @@ li {
 #button:hover .mask {
 	background-image: url(assets/images/nomask.png);
 	position: absolute;
-	left: 202px;
-	bottom: 121px;
+	left: -49px;
+	bottom: 9px;
 }
 
 #button:hover .history {
 	background-image: url(assets/images/history.png);
 	position: absolute;
-	left: 191px;
-	bottom: 85px;
+	left: -60px;
+	bottom: -27px;
 }
 
 #button:hover .message {
 	background-image: url(assets/images/message.png);
 	position: absolute;
-	left: 205px;
-	bottom: 48px;
+	left: -46px;
+	bottom: -64px;
 }
 
 
@@ -105,15 +100,15 @@ li {
 #button:hover .setting {
 	background-image: url(assets/images/setting.png);
 	position: absolute;
-	left: 239px;
-	bottom: 27px;
+	left: -12px;
+	bottom: -85px;
 }
 
 #button:hover .sign {
 	background-image: url(assets/images/signin.png);
 	position: absolute;
-	left: 281px;
-	bottom: 30px;
+	left: 30px;
+	bottom: -82px;
 }
 
 #info-bar {
