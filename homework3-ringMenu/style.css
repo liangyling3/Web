@@ -49,6 +49,11 @@ li {
 	transform: scale(1);
 	transition: 0.5s;
 }
+
+#control-ring-container {	
+	transform: scale(0);		
+	position: relative;
+}
  
 #button:hover .mask, #button:hover .history, #button:hover .message, #button:hover .setting, #button:hover .sign {
 	height: 34px;
