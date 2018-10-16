@@ -35,8 +35,11 @@ function input(element) {
 		onScreen = '0';
 	} 
 	else if (element == '←') {
-		// 考虑回退到空的情况
+		if (flag = 1) {
+			onScreen = '0';
+		}
 		onScreen = onScreen.substring(0, onScreen.length-1);
+		// 考虑回退到空的情况
 		if (onScreen.length == 0) onScreen = '0';
 	}
 	// 连续输入两个操作符的情况
