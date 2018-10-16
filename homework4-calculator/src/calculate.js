@@ -35,7 +35,7 @@ function input(element) {
 		onScreen = '0';
 	} 
 	else if (element == '←') {
-		if (flag = 1) {
+		if (flag == 1) {
 			onScreen = '0';
 		}
 		onScreen = onScreen.substring(0, onScreen.length-1);
