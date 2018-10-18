@@ -61,6 +61,12 @@ function input(element) {
 		onScreen = element;
 	}
 	
-	document.getElementById('screen').innerHTML = onScreen;	
+	if (onScreen.length > 23) {
+		// 从右往左截取片段
+		var substr = onScreen.slice(onScreen.length-23, onScreen.length);
+		document.getElementById('screen').innerHTML = substr;	
+	}
+	else
+		document.getElementById('screen').innerHTML = onScreen;	
 	flag = 0;
 }
