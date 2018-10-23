@@ -1,0 +1,183 @@
+body {
+	margin: auto;
+	height: 600px;
+	width: 650px;
+	background-color: #c9d9ff;
+}
+
+h1 {
+	color: #4e74c7;
+	font-family: sans-serif;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+	letter-spacing: 3px;
+	user-select: none;
+	font-weight: normal;
+}
+
+p {
+	color: #4e74c7;
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+	user-select: none;
+	font-weight: normal;
+	resize: none;		/*禁止文本被拖动*/
+}
+
+#info {
+	color: #c761b8;
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 25px;
+	height: 25px;
+	text-align: center;
+	border: solid 1px #c761b8;
+	transition: 0.5s;
+}
+
+#maze {
+	width: 550px;
+	height: 370px;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#toRestart {
+	float: left;
+	width: 550px;
+	height: 370px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wall {
+	background-color: #5568aa;
+}
+
+.error {
+	background-color: #9e5994;
+}
+
+#wall_1 {
+	width: 120px;
+	height: 265px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#wall_2 {
+	height: 80px;
+	width: 310px;
+	position: absolute;
+	left: 120px;
+	top: 0;
+}
+#wall_3 {
+	width: 120px;
+	height: 265px;
+	position: absolute;
+	left: 430px;
+	top: 0;
+}
+#wall_4 {
+	width: 240px;
+	height: 185px;
+	position: absolute;
+	left: 155px;
+	top: 115px;
+}
+#wall_5 {
+	width: 550px;
+	height: 70px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+#wall_0 {
+	background-color: #5568aa;
+	width: 80px;
+	height: 30px;
+	margin: auto;
+	text-align: center;
+}
+
+.path {
+	background-color: #c9d9ff;
+}
+
+#path_1 {
+	width: 155px;
+	height: 35px;
+	position: absolute;
+	left: 0;
+	bottom: 70px;
+}
+#path_2 {
+	width: 35px;
+	height: 185px;
+	position: absolute;
+	left: 120px;
+	bottom: 105px;
+}
+#path_3 {
+	width: 240px;
+	height: 35px;
+	position: absolute;
+	left: 155px;
+	top: 80px;
+}
+#path_4 {
+	width: 35px;
+	height: 185px;
+	position: absolute;
+	right: 120px;
+	bottom: 105px;
+}
+#path_5 {
+	width: 135px;
+	height: 35px;
+	position: absolute;
+	right: 20px;
+	bottom: 70px;
+}
+
+.littleBlock {
+	color: #5f86d9;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	vertical-align: middle;
+	border: solid 1px #5f86d9;
+	font-size: 18px;
+	user-select: none;	/*禁止文本被选中*/
+	transition: 0.3s;
+}
+
+.littleBlock:hover {
+	background-color: #5f86d9;
+	color: #c9d9ff;
+	transition: 0.3s;
+}
+
+#startBlock {
+	position: absolute;
+	left: 0;
+	bottom: 75px;
+}
+
+#endBlock {
+	position: absolute;
+	right: 0;
+	bottom: 75px;
+}
+
+#testCheat {
+	opacity: 0;
+}

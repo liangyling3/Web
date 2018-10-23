@@ -1,0 +1,40 @@
+<!--
+	homework6-mouse maze
+	17343071 梁宇凌
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Amazing Mouse Maze!</title>
+	<meta charset="utf-8">
+	<script src="src/mouseMaze.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/mouseMaze.css">
+</head>
+<body>
+	<h1>The Amazing Mouse Maze!</h1>
+	<p>Move your mouse over the "S" to begin.</p>
+	<p id="info">Move the mouse over the "S" to begin.</p>
+	<div id="maze">
+		<div id="toRestart"></div>
+		<div id="wall_1" class="wall"></div>
+		<div id="wall_2" class="wall"></div>
+		<div id="wall_3" class="wall"></div>
+		<div id="wall_4" class="wall"></div>
+		<div id="wall_5" class="wall"></div>
+
+		<div id="path_1" class="path"></div>
+		<div id="path_2" class="path"></div>
+		<div id="path_3" class="path"></div>
+		<div id="path_4" class="path"></div>
+		<div id="path_5" class="path"></div>
+
+		<div id="startBlock" class="littleBlock">S</div>
+		<div id="endBlock" class="littleBlock">E</div>
+	</div>
+	<p>The object of this game is to guide the mouse cursor through the start area and get to the end area.Be sure to avoid the walls:</p>
+	<div id="wall_0"></div>
+	<p>Good luck!</p>
+	<!--HTML是从上而下渲染的！！，如果放在head中，会导致有些内容未渲染而报错-->
+	<script src="src/mouseMaze.js"></script>
+</body>
+</html>
