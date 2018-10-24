@@ -2,6 +2,7 @@ var startFlag = 0;
 var endFlag = 0;
 var impactFlag = 0;
 var throughPathFlag = [0,0,0,0,0];
+var testFlag = 0;
 
 var startBlock = document.getElementById('startBlock');
 var endBlock = document.getElementById('endBlock');
@@ -23,6 +24,9 @@ function start(ev) {
 	if (startFlag != 1) {
 		endFlag = 0;
 		impactFlag = 0;
+		throughPathFlag = [0,0,0,0,0];
+	}
+	else {
 		throughPathFlag = [0,0,0,0,0];
 	}
 	document.getElementById('info').style.opacity = 0;
@@ -69,6 +73,12 @@ function isCheat(ev) {
 		return false;
 	else
 		return true;
+}
+
+function test(ev) {
+	if (startFlag == 1) {
+		testFlag = 1;
+	}
 }
 
 function end(ev) {

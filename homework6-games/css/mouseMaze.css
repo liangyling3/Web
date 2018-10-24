@@ -149,13 +149,13 @@ p {
 
 .littleBlock {
 	color: #5f86d9;
-	width: 18px;
-	height: 18px;
-	line-height: 18px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
 	text-align: center;
 	vertical-align: middle;
 	border: solid 1px #5f86d9;
-	font-size: 18px;
+	font-size: 23px;
 	user-select: none;	/*禁止文本被选中*/
 	transition: 0.3s;
 }
@@ -169,15 +169,12 @@ p {
 #startBlock {
 	position: absolute;
 	left: 0;
-	bottom: 75px;
+	bottom: 73px;
 }
 
 #endBlock {
 	position: absolute;
 	right: 0;
-	bottom: 75px;
+	bottom: 73px;
 }
 
-#testCheat {
-	opacity: 0;
-}
