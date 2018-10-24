@@ -56,7 +56,7 @@ p {
 
 .button:hover {
 	background-color: #3d5337;
-    color: #f1daf2;
+    color: #9eb39f;
     transition: 0.2s;
 }
 
@@ -65,7 +65,7 @@ p {
     transition-duration: 0s;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); 
     background-color: #3d5337;
-    color: #f1daf2;
+    color: #9eb39f;
 }
 
 #screen {
