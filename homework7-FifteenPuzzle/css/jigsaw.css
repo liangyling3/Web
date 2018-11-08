@@ -73,12 +73,7 @@ p, .score, #restart {
 	top: 200px;
 	line-height: 25px;
 	background-color: #a7bebf;
-}
-.normal {
 	color: #006666;
-}
-.win {
-	color: #ac4848;
 }
 
 #restart {

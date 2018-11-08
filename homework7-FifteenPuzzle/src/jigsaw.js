@@ -33,13 +33,6 @@ function countTime() {
 	$('#time').html(clock);	// 注意！！jQuery中没有innerHTML
 							// jQuery获得的是jQuery对象，文件选择获得的是DOM对象
 	setTime = setTimeout(countTime, 1000); 	// 单位为毫秒
-	if (isEnd == 1) {
-		clearInterval(setTime);	
-		var step = $('#step').html();   
-		var time = $('#time').html();
-		$('#instruction').className = 'win';
-		$('#instruction').html("You win!! You spent "+time+" seconds and "+step+" steps to win the game!!");
-	}
 }
 
 // 思路：给每一块加上位置标识，移动中位置标识不变；移动时id改变（图片改变）
@@ -78,6 +71,14 @@ function move() {
 			checkWin();
 		}
 	}
+	if (isEnd == 1) {
+		clearInterval(setTime);	
+		var step = $('#step').html();   
+		var time = $('#time').html();
+		$('#instruction').html("You win!! You spent "+time+" seconds and "+step+" steps to win the game!!");
+		$('#instruction').css('color','#ac4848');
+		$('.block').unbind(); // 移除事件，防止继续操作
+	}
 }
 
 function randomBlocks() {
@@ -98,27 +99,36 @@ function randomBlocks() {
 	}
 }
 function checkRandom() {  // 检查是否不可还原
-	var count = 0;
+	var count = 0;		// count:计算逆序数
+	var m,n = 0;
 	for (var i = 0; i < 16; ++i) {
-		for (var j = 0; j < 16; ++j) {
-			if (i<j && blocks[j].id.substring(6)<blocks[i].id.substring(6))
-				count ++;
-			if (i>j && blocks[j].id.substring(6)>blocks[i].id.substring(6))
+		var num = parseInt(blocks[i].id.substring(6));
+		if (num == 16) {  // 获得空白位置
+			m = parseInt(i/4);
+			n = parseInt(i%4);
+		}
+		for (var j = i+1; j < 16; ++j) {
+			if (parseInt(blocks[j].id.substring(6))<num)
 				count ++;
 		}
 	}
-	if (count % 2 == 0) 
+	count += m;
+	count += n;
+	if (count % 2 == 0) {
 		return true;
+	}
 	return false;
 }
 
 function restart() {
+	initial();
 	isStart = 0;
 	clearInterval(setTime);
 	clock = 0;
 	countStep = 0;
 	$('#time').html(clock);
 	$('#step').html(countStep);
+	$('#instruction').css('color','#006666');
 	randomBlocks();
 }
 
