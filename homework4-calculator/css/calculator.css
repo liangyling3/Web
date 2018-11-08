@@ -87,7 +87,7 @@ ul {
 	line-height: 40px;
 	height: 40px;
     transition-property: all;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 .button:hover, .button:focus {
  	color: #f2cbd0;
