@@ -104,16 +104,17 @@ function checkRandom() {  // 检查是否不可还原
 	for (var i = 0; i < 16; ++i) {
 		var num = parseInt(blocks[i].id.substring(6));
 		if (num == 16) {  // 获得空白位置
-			m = parseInt(i/4);
-			n = parseInt(i%4);
+			m = Math.floor(i/4);
+			n = Math.floor(i%4);
 		}
 		for (var j = i+1; j < 16; ++j) {
-			if (parseInt(blocks[j].id.substring(6))<num)
+			var _num = parseInt(blocks[j].id.substring(6));
+			if (_num<num)
 				count ++;
 		}
 	}
-	count += m;
-	count += n;
+	count += 3-m;
+	count += 3-n;
 	if (count % 2 == 0) {
 		return true;
 	}
