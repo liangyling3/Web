@@ -21,7 +21,6 @@ function initial() {
 
 function setStartState() {
 	isStart = 1;
-	isEnd = 0;
 	countStep = 0;
 	clock = -1;
 	countTime();
@@ -38,7 +37,7 @@ function countTime() {
 // 思路：给每一块加上位置标识，移动中位置标识不变；移动时id改变（图片改变）
 function move() {
 	var index = parseInt(this.id.substring(6));
-	if (index !== 16) {
+	if (index !== 16 && isEnd == 0) {
 		var position = parseInt(this.className.substring(15))-1;
 
 		if ((position != 0 && blocks[position-1].id.substring(6) == 16) ||
@@ -70,14 +69,6 @@ function move() {
 			}
 			checkWin();
 		}
-	}
-	if (isEnd == 1) {
-		clearInterval(setTime);	
-		var step = $('#step').html();   
-		var time = $('#time').html();
-		$('#instruction').html("You win!! You spent "+time+" seconds and "+step+" steps to win the game!!");
-		$('#instruction').css('color','#ac4848');
-		$('.block').unbind(); // 移除事件，防止继续操作
 	}
 }
 
@@ -124,11 +115,13 @@ function checkRandom() {  // 检查是否不可还原
 function restart() {
 	initial();
 	isStart = 0;
+	isEnd = 0;
 	clearInterval(setTime);
 	clock = 0;
 	countStep = 0;
 	$('#time').html(clock);
 	$('#step').html(countStep);
+	$('#instruction').html("Click the small blocks to restore the picture!");
 	$('#instruction').css('color','#006666');
 	randomBlocks();
 }
@@ -142,5 +135,12 @@ function checkWin() {
 	if (flag == 1) {
 		isEnd = 1;
 		isStart = 0;
+	}
+	if (isEnd == 1) {
+		clearInterval(setTime);	
+		var step = $('#step').html();   
+		var time = $('#time').html();
+		$('#instruction').html("You win!! You spent "+time+" seconds and "+step+" steps to win the game!!");
+		$('#instruction').css('color','#ac4848');
 	}
 }

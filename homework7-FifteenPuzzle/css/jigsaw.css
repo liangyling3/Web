@@ -94,7 +94,7 @@ p, .score, #restart {
 	left: 40px;
 	top: 400px;
 }
-#restart:hover, #restart:focus {
+#restart:hover {
 	background-color: #006666;
 	color: #a7bebf;
 }
