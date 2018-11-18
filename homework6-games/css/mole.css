@@ -1,22 +1,29 @@
 body {
-	background-color: #9eb39f;
+	background-color: #c1c0ed;
 	width: 600px;
 	height: 600px;
 	margin: auto;
 }
 
+@font-face {
+	font-family: Qusong;
+	src: url(../font/Qusong.otf);
+}
+
 h1 {
-	color: #3d5337;
-	font-family: sans-serif;
+	color: #5b5787;
+	font-family: Qusong;
 	font-size: 30px;
 	letter-spacing: 3px;
 	text-align: center;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 p {
-	color: #3d5337;
-	font-size: 16px;
+	color: #5b5787;
+	font-size: 17px;
+	font-family: Qusong;
+	letter-spacing: 1px;
 	text-align: center;
 }
 
@@ -35,27 +42,23 @@ p {
 
 #startButton {
 	position: absolute;
+	font-size: 17px;
 	left: 15px;
 }
 
-#stopButton {
-	position: absolute;
-	left: 115px;
-}
-
 .button {
-	font-family: sans-serif;
+	font-family: Qusong;
 	line-height: 20px;
 	letter-spacing: 1px;
-	color: #3d5337;
+	color: #5b5787;
 	background-color: transparent;
-	border: solid 1px #3d5337;
+	border: solid 1px #5b5787;
 	border-radius: 20px;
 	outline: 0;
 }
 
 .button:hover {
-	background-color: #3d5337;
+	background-color: #5b5787;
     color: #9eb39f;
     transition: 0.2s;
 }
@@ -64,7 +67,7 @@ p {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     transition-duration: 0s;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); 
-    background-color: #3d5337;
+    background-color: #5b5787;
     color: #9eb39f;
 }
 
@@ -75,9 +78,9 @@ p {
 	position: absolute;
 	left: 15px;
 	top: 35px;
-	border: solid 1px #3d5337;
+	border: solid 1px #5b5787;
 	border-radius: 20px;
-	color: #3d5337;
+	color: #5b5787;
 	font-size: 16px;
 	text-align: center;
 	transition: 0.5s;
@@ -85,7 +88,7 @@ p {
 }
 
 #time {
-	color: #3d5337;
+	color: #5b5787;
 	font-size: 16px;
 	position: absolute;
 	right: 130px;
@@ -96,7 +99,7 @@ p {
 	width: 100px;
 	height: 20px;
 	line-height: 20px;
-	border: solid 1px #3d5337;
+	border: solid 1px #5b5787;
 	border-radius: 10px;
 	position: absolute;
 	left: 50px;
@@ -105,7 +108,7 @@ p {
 }
 
 #score {
-	color: #3d5337;
+	color: #5b5787;
 	font-size: 16px;
 	position: absolute;
 	right: 130px;
@@ -116,7 +119,7 @@ p {
 #scoreFrame {
 	width: 100px;
 	height: 20px;
-	border: solid 1px #3d5337;
+	border: solid 1px #5b5787;
 	border-radius: 10px;
 	position: absolute;
 	left: 55px;
@@ -125,10 +128,10 @@ p {
 }
 
 #matrix {
-	background-color: #7b9678;
+	background-color: #908db8;
 	width: 500px;
 	height: 350px;
-	border: solid 1px #3d5337;
+	border: solid 1px #5b5787;
 	border-radius: 20px;
 	text-align: center;
 	position: relative;
@@ -180,7 +183,7 @@ p {
 }
 
 #instructions {
-	color: #3d5337;
+	color: #5b5787;
 	font-size: 18px;
 	text-indent: -0px;
 	font-weight: bold;
@@ -188,9 +191,11 @@ p {
 
 #instructions dd {
 	margin-top: 5px;
-	color: #3d5337;
-	font-size: 16px;
+	color: #5b5787;
+	font-size: 17px;
 	text-indent: 0;
+	font-family: Qusong;
 	font-weight: normal;
+	letter-spacing: 1px;
 	margin-left: 20px;
 }
